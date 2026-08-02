@@ -9,11 +9,11 @@ export const FooterSection: React.FC = () => {
         {/* Brand Column */}
         <div className="md:col-span-5 space-y-4">
           <div className="flex items-center gap-3 sm:gap-3.5">
-            <div className="w-11 h-11 sm:w-12 sm:h-12 shrink-0 rounded-xl bg-gradient-to-br from-white via-slate-200 to-slate-400 p-[1.5px] shadow-xl overflow-hidden flex items-center justify-center bg-black">
+            <div className="relative shrink-0 rounded-xl bg-gradient-to-br from-white via-slate-200 to-slate-400 p-[1.5px] shadow-xl flex items-center justify-center bg-black">
               <img 
                 src="/src/assets/images/fly_fit_brand_logo_1785622774553.jpg" 
                 alt="Fly Fit Emblem" 
-                className="w-full h-full object-contain rounded-[10px] bg-black"
+                className="w-10 h-10 sm:w-12 sm:h-12 object-contain rounded-[10px] bg-black block shrink-0"
               />
             </div>
             <div className="flex flex-col justify-center shrink-0">

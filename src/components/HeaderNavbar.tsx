@@ -35,12 +35,12 @@ export const HeaderNavbar: React.FC<HeaderNavbarProps> = ({ onOpenBooking }) => 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 sm:gap-6">
         
         {/* Brand Logo - Fully uncropped & sharp across all mobile screen sizes */}
-        <a href="#" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
-          <div className="w-11 h-11 sm:w-12 sm:h-12 shrink-0 rounded-xl bg-gradient-to-br from-white via-slate-200 to-slate-400 p-[1.5px] shadow-xl group-hover:scale-105 transition-transform overflow-hidden flex items-center justify-center bg-black">
+        <a href="#" className="flex items-center gap-2.5 sm:gap-3 group shrink-0 min-w-0">
+          <div className="relative shrink-0 rounded-xl bg-gradient-to-br from-white via-slate-200 to-slate-400 p-[1.5px] shadow-xl group-hover:scale-105 transition-transform flex items-center justify-center bg-black">
             <img 
               src="/src/assets/images/fly_fit_brand_logo_1785622774553.jpg" 
               alt="Fly Fit Brand Logo" 
-              className="w-full h-full object-contain rounded-[10px] bg-black"
+              className="w-10 h-10 sm:w-12 sm:h-12 object-contain rounded-[10px] bg-black block shrink-0"
             />
           </div>
           <div className="flex flex-col justify-center shrink-0">
