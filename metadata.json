@@ -1,0 +1,6 @@
+{
+  "name": "Fly Fit Luxury Athletic Club",
+  "description": "Exclusive high-end luxury athletic club featuring Fly Fit bespoke coaching, state-of-the-art facilities, biometric analysis, and custom performance training.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
