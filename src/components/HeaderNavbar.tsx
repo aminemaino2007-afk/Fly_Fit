@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, ArrowUpRight, MessageCircle } from 'lucide-react';
+import brandLogo from '../assets/images/fly_fit_brand_logo_1785622774553.jpg';
 
 interface HeaderNavbarProps {
   onOpenBooking: () => void;
@@ -36,11 +37,11 @@ export const HeaderNavbar: React.FC<HeaderNavbarProps> = ({ onOpenBooking }) => 
         
         {/* Brand Logo - Fully uncropped & sharp across all mobile screen sizes */}
         <a href="#" className="flex items-center gap-2.5 sm:gap-3 group shrink-0 min-w-0">
-          <div className="relative shrink-0 rounded-xl bg-gradient-to-br from-white via-slate-200 to-slate-400 p-[1.5px] shadow-xl group-hover:scale-105 transition-transform flex items-center justify-center bg-black">
+          <div className="relative shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-white via-slate-200 to-slate-400 p-[1.5px] shadow-xl group-hover:scale-105 transition-transform flex items-center justify-center bg-black overflow-hidden">
             <img 
-              src="/src/assets/images/fly_fit_brand_logo_1785622774553.jpg" 
+              src={brandLogo} 
               alt="Fly Fit Brand Logo" 
-              className="w-10 h-10 sm:w-12 sm:h-12 object-contain rounded-[10px] bg-black block shrink-0"
+              className="w-full h-full object-contain rounded-[10px] bg-black block shrink-0"
             />
           </div>
           <div className="flex flex-col justify-center shrink-0">

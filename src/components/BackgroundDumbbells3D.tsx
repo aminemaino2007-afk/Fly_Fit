@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { BackgroundDumbbellConfig } from '../types';
 import { processSeamlessImage } from '../utils/imageProcessor';
+import rawTopLeftImgSrc from '../assets/images/dumbbell_top_cutout_1785613398786.jpg';
+import rawBottomRightImgSrc from '../assets/images/dumbbell_bottom_cutout_1785613413221.jpg';
 
 interface BackgroundDumbbells3DProps {
   config: BackgroundDumbbellConfig;
@@ -10,10 +12,6 @@ export const BackgroundDumbbells3D: React.FC<BackgroundDumbbells3DProps> = ({ co
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [scrollY, setScrollY] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
-  
-  // Ref images from assets
-  const rawTopLeftImgSrc = '/src/assets/images/dumbbell_top_cutout_1785613398786.jpg';
-  const rawBottomRightImgSrc = '/src/assets/images/dumbbell_bottom_cutout_1785613413221.jpg';
 
   const [topLeftImgSrc, setTopLeftImgSrc] = useState(rawTopLeftImgSrc);
   const [bottomRightImgSrc, setBottomRightImgSrc] = useState(rawBottomRightImgSrc);

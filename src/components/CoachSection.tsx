@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'motion/react';
 import { ShieldCheck, Award, Zap, Sparkles, Trophy, CheckCircle2, Play, Volume2 } from 'lucide-react';
 import { CoachInfo } from '../types';
+import coachFallbackImg from '../assets/images/coach_asil_hd_cutout_1785618175345.jpg';
 
 interface CoachSectionProps {
   coach: CoachInfo;
@@ -18,7 +19,7 @@ export const CoachSection: React.FC<CoachSectionProps> = ({ coach, onBookSession
 
   // Helper to resolve direct image source from Google Drive sharing link or standard image URLs
   const formatDriveUrl = (url: string) => {
-    if (!url) return '/src/assets/images/coach_asil_hd_cutout_1785618175345.jpg';
+    if (!url) return coachFallbackImg;
     const driveMatch = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
     if (driveMatch && driveMatch[1]) {
       return `https://lh3.googleusercontent.com/d/${driveMatch[1]}`;
@@ -158,7 +159,7 @@ export const CoachSection: React.FC<CoachSectionProps> = ({ coach, onBookSession
                   alt={coach.name}
                   referrerPolicy="no-referrer"
                   onError={() => {
-                    setImgSrc('/src/assets/images/coach_asil_hd_cutout_1785618175345.jpg');
+                    setImgSrc(coachFallbackImg);
                   }}
                   className={`w-full h-full rounded-xl transition-all duration-500 group-hover:scale-105 drop-shadow-[0_20px_40px_rgba(0,0,0,0.9)] ${
                     fitMode === 'contain' ? 'object-contain p-2' : 'object-cover object-top'
