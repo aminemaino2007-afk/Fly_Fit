@@ -8,19 +8,19 @@ export const FooterSection: React.FC = () => {
         
         {/* Brand Column */}
         <div className="md:col-span-5 space-y-4">
-          <div className="flex items-center gap-3.5">
-            <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-white via-slate-300 to-slate-500 p-0.5 overflow-hidden">
+          <div className="flex items-center gap-3 sm:gap-3.5">
+            <div className="w-11 h-11 sm:w-12 sm:h-12 shrink-0 rounded-xl bg-gradient-to-br from-white via-slate-200 to-slate-400 p-[1.5px] shadow-xl overflow-hidden flex items-center justify-center bg-black">
               <img 
                 src="/src/assets/images/fly_fit_brand_logo_1785622774553.jpg" 
                 alt="Fly Fit Emblem" 
-                className="w-full h-full object-cover rounded-[10px]"
+                className="w-full h-full object-contain rounded-[10px] bg-black"
               />
             </div>
-            <div>
-              <span className="text-xl font-syne font-extrabold tracking-widest text-white block leading-none">
+            <div className="flex flex-col justify-center shrink-0">
+              <span className="text-base sm:text-xl font-syne font-extrabold tracking-widest text-white block leading-none whitespace-nowrap">
                 FLY FIT
               </span>
-              <span className="text-[9px] font-semibold uppercase tracking-widest text-slate-400 block mt-1">
+              <span className="text-[8px] sm:text-[9px] font-semibold uppercase tracking-widest text-slate-400 block mt-1 whitespace-nowrap">
                 ATHLETIC CLUB & SANCTUARY
               </span>
             </div>

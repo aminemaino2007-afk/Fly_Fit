@@ -32,22 +32,22 @@ export const HeaderNavbar: React.FC<HeaderNavbarProps> = ({ onOpenBooking }) => 
         scrolled ? 'py-3 sm:py-4 bg-slate-950/90 border-b border-white/10 shadow-2xl backdrop-blur-xl' : 'py-4 sm:py-6 bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 sm:gap-6">
         
-        {/* Brand Logo */}
-        <a href="#" className="flex items-center gap-3 group shrink-0">
-          <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-white via-slate-300 to-slate-500 p-0.5 shadow-xl group-hover:scale-105 transition-transform overflow-hidden">
+        {/* Brand Logo - Fully uncropped & sharp across all mobile screen sizes */}
+        <a href="#" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+          <div className="w-11 h-11 sm:w-12 sm:h-12 shrink-0 rounded-xl bg-gradient-to-br from-white via-slate-200 to-slate-400 p-[1.5px] shadow-xl group-hover:scale-105 transition-transform overflow-hidden flex items-center justify-center bg-black">
             <img 
               src="/src/assets/images/fly_fit_brand_logo_1785622774553.jpg" 
-              alt="Fly Fit Logo" 
-              className="w-full h-full object-cover rounded-[10px]"
+              alt="Fly Fit Brand Logo" 
+              className="w-full h-full object-contain rounded-[10px] bg-black"
             />
           </div>
-          <div>
-            <span className="text-base sm:text-xl font-syne font-extrabold tracking-widest text-white block leading-none">
+          <div className="flex flex-col justify-center shrink-0">
+            <span className="text-base sm:text-xl font-syne font-extrabold tracking-widest text-white block leading-none whitespace-nowrap">
               FLY FIT
             </span>
-            <span className="text-[8px] sm:text-[9px] font-semibold uppercase tracking-widest text-slate-400 block mt-0.5 sm:mt-1">
+            <span className="text-[8px] sm:text-[9px] font-semibold uppercase tracking-widest text-slate-400 block mt-1 whitespace-nowrap">
               ATHLETIC CLUB
             </span>
           </div>
