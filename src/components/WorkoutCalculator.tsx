@@ -81,7 +81,7 @@ export const WorkoutCalculator: React.FC = () => {
             <label className="text-xs font-semibold text-slate-400 uppercase tracking-widest block">
               PRIMARY ATHLETIC OBJECTIVE
             </label>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
               {[
                 { id: 'power', label: 'Explosive Power', desc: 'Neural drive & max force' },
                 { id: 'hypertrophy', label: 'Hypertrophy', desc: 'Lean muscular density' },
@@ -90,15 +90,16 @@ export const WorkoutCalculator: React.FC = () => {
               ].map((item) => (
                 <button
                   key={item.id}
+                  type="button"
                   onClick={() => setGoal(item.id as any)}
-                  className={`p-4 rounded-xl text-left border transition-all ${
+                  className={`p-3.5 sm:p-4 rounded-xl text-left border transition-all cursor-pointer min-h-[48px] ${
                     goal === item.id
                       ? 'bg-white text-black border-white shadow-xl font-bold'
                       : 'bg-slate-900/60 hover:bg-slate-900 border-slate-800 text-slate-300'
                   }`}
                 >
-                  <div className="text-sm font-syne">{item.label}</div>
-                  <div className={`text-[11px] mt-1 ${goal === item.id ? 'text-slate-700' : 'text-slate-500'}`}>
+                  <div className="text-xs sm:text-sm font-syne">{item.label}</div>
+                  <div className={`text-[10px] sm:text-[11px] mt-0.5 ${goal === item.id ? 'text-slate-700' : 'text-slate-400'}`}>
                     {item.desc}
                   </div>
                 </button>
@@ -108,16 +109,17 @@ export const WorkoutCalculator: React.FC = () => {
 
           {/* Training Days */}
           <div className="space-y-2">
-            <div className="flex justify-between items-center text-sm font-semibold">
+            <div className="flex justify-between items-center text-xs sm:text-sm font-semibold">
               <span className="text-slate-300">TRAINING FREQUENCY</span>
-              <span className="text-white font-mono text-lg">{daysPerWeek} Days / Week</span>
+              <span className="text-white font-mono text-base sm:text-lg">{daysPerWeek} Days / Week</span>
             </div>
             <div className="flex gap-2">
               {[2, 3, 4, 5, 6].map((num) => (
                 <button
                   key={num}
+                  type="button"
                   onClick={() => setDaysPerWeek(num)}
-                  className={`flex-1 py-3 rounded-xl font-syne font-bold text-sm transition-all ${
+                  className={`flex-1 py-3 rounded-xl font-syne font-bold text-xs sm:text-sm transition-all cursor-pointer min-h-[44px] ${
                     daysPerWeek === num
                       ? 'bg-white text-black shadow-lg'
                       : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'

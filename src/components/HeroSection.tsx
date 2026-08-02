@@ -34,7 +34,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ stats, onOpenBooking, 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-syne font-extrabold tracking-tighter text-white uppercase leading-[0.9]"
+          className="text-4xl xs:text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-syne font-extrabold tracking-tight sm:tracking-tighter text-white uppercase leading-[0.95] sm:leading-[0.9] break-words"
         >
           FORGE YOUR <br />
           <span className="text-silver-shine">UNFAIR ADVANTAGE</span>
@@ -45,7 +45,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ stats, onOpenBooking, 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-3xl mx-auto text-slate-300 text-base sm:text-xl font-normal leading-relaxed"
+          className="max-w-3xl mx-auto text-slate-300 text-sm sm:text-lg md:text-xl font-normal leading-relaxed px-2"
         >
           An uncompromising sanctuary engineered for executives, elite athletes, and visionaries. 
           Combining 3D biomechanics, custom hyper-recovery, and master personal mentorship.
@@ -56,19 +56,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ stats, onOpenBooking, 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4"
+          className="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-2 sm:pt-4 w-full max-w-md mx-auto sm:max-w-none"
         >
           <button
+            type="button"
             onClick={onOpenBooking}
-            className="w-full sm:w-auto px-9 py-4 rounded-xl bg-white text-black font-syne font-bold text-sm tracking-wider uppercase shadow-2xl hover:bg-slate-200 active:scale-95 transition-all flex items-center justify-center gap-2 group"
+            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-black font-syne font-bold text-xs sm:text-sm tracking-wider uppercase shadow-2xl hover:bg-slate-200 active:scale-95 transition-all flex items-center justify-center gap-2 group cursor-pointer min-h-[48px]"
           >
             <span>CONTACT US</span>
             <ChevronRight className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform" />
           </button>
 
           <button
+            type="button"
             onClick={onExploreMembership}
-            className="w-full sm:w-auto px-9 py-4 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-700/80 text-white font-syne font-bold text-sm tracking-wider uppercase backdrop-blur-md transition-all shadow-xl active:scale-95 flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-700/80 text-white font-syne font-bold text-xs sm:text-sm tracking-wider uppercase backdrop-blur-md transition-all shadow-xl active:scale-95 flex items-center justify-center gap-2 cursor-pointer min-h-[48px]"
           >
             <Play className="w-4 h-4 fill-white" />
             <span>EXPLORE MEMBERSHIP</span>
@@ -80,40 +82,40 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ stats, onOpenBooking, 
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="pt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto"
+          className="pt-10 sm:pt-16 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto"
         >
-          <div className="p-5 rounded-2xl bg-glass-card border border-white/10 text-center space-y-1">
-            <div className="text-3xl sm:text-4xl font-syne font-black text-white">
+          <div className="p-4 sm:p-5 rounded-2xl bg-glass-card border border-white/10 text-center space-y-1">
+            <div className="text-2xl sm:text-4xl font-syne font-black text-white">
               {stats.activeMembers}
             </div>
-            <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-widest">
+            <div className="text-[10px] sm:text-[11px] font-semibold text-slate-400 uppercase tracking-wider sm:tracking-widest">
               CAPACITY LIMIT
             </div>
           </div>
 
-          <div className="p-5 rounded-2xl bg-glass-card border border-white/10 text-center space-y-1">
-            <div className="text-3xl sm:text-4xl font-syne font-black text-white">
+          <div className="p-4 sm:p-5 rounded-2xl bg-glass-card border border-white/10 text-center space-y-1">
+            <div className="text-2xl sm:text-4xl font-syne font-black text-white">
               {stats.satisfactionRate}%
             </div>
-            <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-widest">
+            <div className="text-[10px] sm:text-[11px] font-semibold text-slate-400 uppercase tracking-wider sm:tracking-widest">
               GOAL ATTAINMENT
             </div>
           </div>
 
-          <div className="p-5 rounded-2xl bg-glass-card border border-white/10 text-center space-y-1">
-            <div className="text-3xl sm:text-4xl font-syne font-black text-white">
+          <div className="p-4 sm:p-5 rounded-2xl bg-glass-card border border-white/10 text-center space-y-1">
+            <div className="text-2xl sm:text-4xl font-syne font-black text-white">
               100%
             </div>
-            <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-widest">
+            <div className="text-[10px] sm:text-[11px] font-semibold text-slate-400 uppercase tracking-wider sm:tracking-widest">
               PRIVATE & DISCREET
             </div>
           </div>
 
-          <div className="p-5 rounded-2xl bg-glass-card border border-white/10 text-center space-y-1">
-            <div className="text-3xl sm:text-4xl font-syne font-black text-white">
+          <div className="p-4 sm:p-5 rounded-2xl bg-glass-card border border-white/10 text-center space-y-1">
+            <div className="text-2xl sm:text-4xl font-syne font-black text-white">
               24/7
             </div>
-            <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-widest">
+            <div className="text-[10px] sm:text-[11px] font-semibold text-slate-400 uppercase tracking-wider sm:tracking-widest">
               CONCIERGE ACCESS
             </div>
           </div>

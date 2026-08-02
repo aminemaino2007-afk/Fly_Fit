@@ -43,9 +43,9 @@ export const MembershipSection: React.FC<MembershipSectionProps> = ({ tiers, onS
               viewport={{ once: true }}
               whileHover={{ y: -8 }}
               transition={{ duration: 0.4 }}
-              className={`relative rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 ${
+              className={`relative rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 ${
                 isFeatured
-                  ? 'bg-glass-card border-2 border-white/40 shadow-2xl scale-105 z-20'
+                  ? 'bg-glass-card border-2 border-white/40 shadow-2xl md:scale-105 z-20'
                   : 'bg-glass-card border border-white/10 hover:border-white/20 z-10'
               }`}
             >
