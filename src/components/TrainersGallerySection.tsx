@@ -59,8 +59,8 @@ export const TrainersGallerySection: React.FC<TrainersGallerySectionProps> = () 
           </p>
         </div>
 
-        {/* Trainers Cards Grid - Photos & Names Only */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        {/* Trainers Cards Grid - 2 columns on mobile */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {trainersData.map((trainer, index) => (
             <motion.div
               key={trainer.id}
@@ -71,7 +71,7 @@ export const TrainersGallerySection: React.FC<TrainersGallerySectionProps> = () 
               className="group relative rounded-2xl bg-slate-900 border border-white/10 overflow-hidden shadow-2xl flex flex-col hover:border-white/30 transition-all duration-300"
             >
               {/* Image Container */}
-              <div className="relative h-80 sm:h-96 w-full overflow-hidden bg-slate-950">
+              <div className="relative h-52 xs:h-64 sm:h-80 md:h-96 w-full overflow-hidden bg-slate-950">
                 <img
                   src={trainer.imageUrl}
                   alt={trainer.name}
@@ -92,8 +92,8 @@ export const TrainersGallerySection: React.FC<TrainersGallerySectionProps> = () 
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90" />
 
                 {/* Name Label */}
-                <div className="absolute bottom-0 inset-x-0 p-5 text-center z-10">
-                  <h3 className="text-xl sm:text-2xl font-syne font-extrabold text-white tracking-wide uppercase group-hover:text-amber-300 transition-colors">
+                <div className="absolute bottom-0 inset-x-0 p-3 sm:p-5 text-center z-10">
+                  <h3 className="text-sm sm:text-2xl font-syne font-extrabold text-white tracking-wide uppercase group-hover:text-amber-300 transition-colors">
                     {trainer.name}
                   </h3>
                 </div>

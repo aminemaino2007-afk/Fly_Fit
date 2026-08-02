@@ -141,44 +141,44 @@ export const WorkoutCalculator: React.FC = () => {
               BIOMETRIC OUTPUT DIAGNOSIS
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1">
-                <div className="flex items-center gap-1.5 text-xs text-slate-400">
-                  <Flame className="w-4 h-4 text-amber-400" />
-                  Caloric Target
+            <div className="grid grid-cols-2 gap-2.5 sm:gap-4">
+              <div className="p-3 sm:p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1 flex flex-col justify-center min-h-[85px]">
+                <div className="flex items-center gap-1.5 text-[11px] sm:text-xs text-slate-400">
+                  <Flame className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                  <span className="truncate">Caloric Target</span>
                 </div>
-                <div className="text-3xl font-syne font-extrabold text-white">
-                  {metrics.dailyCalories} <span className="text-xs font-normal text-slate-400">kcal/day</span>
-                </div>
-              </div>
-
-              <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1">
-                <div className="flex items-center gap-1.5 text-xs text-slate-400">
-                  <Zap className="w-4 h-4 text-emerald-400" />
-                  Protein Target
-                </div>
-                <div className="text-3xl font-syne font-extrabold text-white">
-                  {metrics.proteinGrams} <span className="text-xs font-normal text-slate-400">g/day</span>
+                <div className="text-lg sm:text-3xl font-syne font-extrabold text-white leading-tight">
+                  {metrics.dailyCalories} <span className="text-[10px] sm:text-xs font-normal text-slate-400">kcal/d</span>
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1">
-                <div className="flex items-center gap-1.5 text-xs text-slate-400">
-                  <Dumbbell className="w-4 h-4 text-slate-300" />
-                  Weekly Volume Load
+              <div className="p-3 sm:p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1 flex flex-col justify-center min-h-[85px]">
+                <div className="flex items-center gap-1.5 text-[11px] sm:text-xs text-slate-400">
+                  <Zap className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                  <span className="truncate">Protein Target</span>
                 </div>
-                <div className="text-3xl font-syne font-extrabold text-white">
-                  {metrics.estimatedLoadVolume.toLocaleString()} <span className="text-xs font-normal text-slate-400">kg</span>
+                <div className="text-lg sm:text-3xl font-syne font-extrabold text-white leading-tight">
+                  {metrics.proteinGrams} <span className="text-[10px] sm:text-xs font-normal text-slate-400">g/d</span>
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1">
-                <div className="flex items-center gap-1.5 text-xs text-slate-400">
-                  <CheckCircle className="w-4 h-4 text-slate-200" />
-                  Power Rating
+              <div className="p-3 sm:p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1 flex flex-col justify-center min-h-[85px]">
+                <div className="flex items-center gap-1.5 text-[11px] sm:text-xs text-slate-400">
+                  <Dumbbell className="w-3.5 h-3.5 text-slate-300 shrink-0" />
+                  <span className="truncate">Weekly Volume</span>
                 </div>
-                <div className="text-3xl font-syne font-extrabold text-white">
-                  {metrics.maxPowerIndex} <span className="text-xs font-normal text-slate-400">pts</span>
+                <div className="text-lg sm:text-3xl font-syne font-extrabold text-white leading-tight">
+                  {metrics.estimatedLoadVolume.toLocaleString()} <span className="text-[10px] sm:text-xs font-normal text-slate-400">kg</span>
+                </div>
+              </div>
+
+              <div className="p-3 sm:p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1 flex flex-col justify-center min-h-[85px]">
+                <div className="flex items-center gap-1.5 text-[11px] sm:text-xs text-slate-400">
+                  <CheckCircle className="w-3.5 h-3.5 text-slate-200 shrink-0" />
+                  <span className="truncate">Power Rating</span>
+                </div>
+                <div className="text-lg sm:text-3xl font-syne font-extrabold text-white leading-tight">
+                  {metrics.maxPowerIndex} <span className="text-[10px] sm:text-xs font-normal text-slate-400">pts</span>
                 </div>
               </div>
             </div>

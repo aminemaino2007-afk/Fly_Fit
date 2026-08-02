@@ -335,7 +335,7 @@ export const LocationSection: React.FC = () => {
             <div className="relative rounded-2xl bg-slate-900 border border-white/10 p-2 shadow-2xl overflow-hidden group">
               
               {/* Styled Map Embed Container */}
-              <div className="relative w-full h-[480px] rounded-xl overflow-hidden bg-slate-950">
+              <div className="relative w-full h-[300px] sm:h-[480px] rounded-xl overflow-hidden bg-slate-950">
                 <iframe
                   title="Fly Fit Location Map"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.4891123!2d10.72!3d34.72!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDQzJzIwLjAiTiAxMMKwNDMnMTIuMCJF!5e0!3m2!1sen!2stn!4v1700000000000"

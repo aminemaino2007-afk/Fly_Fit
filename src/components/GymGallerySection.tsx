@@ -167,7 +167,7 @@ export const GymGallerySection: React.FC = () => {
         </div>
 
         {/* Photos Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {filteredPhotos.map((photo, index) => (
             <motion.div
               key={photo.id}
@@ -179,7 +179,7 @@ export const GymGallerySection: React.FC = () => {
               className="group relative rounded-2xl bg-slate-900/90 border border-white/10 overflow-hidden shadow-2xl flex flex-col hover:border-white/30 transition-all duration-300 cursor-pointer"
             >
               {/* Image Box */}
-              <div className="relative h-72 sm:h-80 overflow-hidden bg-slate-950">
+              <div className="relative h-56 xs:h-64 sm:h-80 overflow-hidden bg-slate-950">
                 <img
                   src={photo.imageUrl}
                   alt={photo.title}

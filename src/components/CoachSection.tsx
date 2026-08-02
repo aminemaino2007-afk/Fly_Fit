@@ -243,31 +243,31 @@ export const CoachSection: React.FC<CoachSectionProps> = ({ coach, onBookSession
             </p>
           </div>
 
-          {/* Achievement Metric Cards */}
-          <div className="grid grid-cols-3 gap-4">
-            <div className="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 text-center space-y-1 hover:border-slate-700 transition-colors">
-              <div className="text-2xl sm:text-3xl font-syne font-extrabold text-white">
+          {/* Achievement Metric Cards - 2 cols on mobile */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-4">
+            <div className="p-3 sm:p-4 rounded-2xl bg-slate-900/60 border border-slate-800 text-center space-y-1 hover:border-slate-700 transition-colors flex flex-col justify-center min-h-[85px]">
+              <div className="text-xl sm:text-3xl font-syne font-extrabold text-white leading-tight">
                 {coach.achievements.years}+
               </div>
-              <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider">
-                Years Master Experience
+              <div className="text-[10px] sm:text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                Master Experience
               </div>
             </div>
 
-            <div className="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 text-center space-y-1 hover:border-slate-700 transition-colors">
-              <div className="text-2xl sm:text-3xl font-syne font-extrabold text-white">
+            <div className="p-3 sm:p-4 rounded-2xl bg-slate-900/60 border border-slate-800 text-center space-y-1 hover:border-slate-700 transition-colors flex flex-col justify-center min-h-[85px]">
+              <div className="text-xl sm:text-3xl font-syne font-extrabold text-white leading-tight">
                 {coach.achievements.athletes.toLocaleString()}+
               </div>
-              <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider">
+              <div className="text-[10px] sm:text-xs font-semibold text-slate-400 uppercase tracking-wider">
                 Athletes Transformed
               </div>
             </div>
 
-            <div className="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 text-center space-y-1 hover:border-slate-700 transition-colors">
-              <div className="text-2xl sm:text-3xl font-syne font-extrabold text-white">
+            <div className="col-span-2 sm:col-span-1 p-3 sm:p-4 rounded-2xl bg-slate-900/60 border border-slate-800 text-center space-y-1 hover:border-slate-700 transition-colors flex flex-col justify-center min-h-[85px]">
+              <div className="text-xl sm:text-3xl font-syne font-extrabold text-white leading-tight">
                 {coach.achievements.championships}
               </div>
-              <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider">
+              <div className="text-[10px] sm:text-xs font-semibold text-slate-400 uppercase tracking-wider">
                 Pro Championships
               </div>
             </div>

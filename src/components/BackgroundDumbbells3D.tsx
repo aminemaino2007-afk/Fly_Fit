@@ -103,7 +103,7 @@ export const BackgroundDumbbells3D: React.FC<BackgroundDumbbells3DProps> = ({ co
 
       {/* ================= DUMBBELL 1: Top-Left Floating 3D Object ================= */}
       <div
-        className="absolute -top-12 -left-12 sm:top-10 sm:left-10 w-72 h-72 sm:w-[420px] sm:h-[420px] transition-transform duration-300 ease-out transform-style-3d"
+        className="absolute -top-12 -left-12 sm:top-10 sm:left-10 w-48 h-48 xs:w-64 xs:h-64 sm:w-[420px] sm:h-[420px] transition-transform duration-300 ease-out transform-style-3d pointer-events-none"
         style={{
           transform: `
             translate3d(${transXTop}px, ${transYTop}px, ${depthZ}px) 
@@ -141,7 +141,7 @@ export const BackgroundDumbbells3D: React.FC<BackgroundDumbbells3DProps> = ({ co
 
       {/* ================= DUMBBELL 2: Bottom-Right Floating 3D Object ================= */}
       <div
-        className="absolute -bottom-16 -right-16 sm:bottom-12 sm:right-12 w-80 h-80 sm:w-[500px] sm:h-[500px] transition-transform duration-300 ease-out transform-style-3d"
+        className="absolute -bottom-16 -right-16 sm:bottom-12 sm:right-12 w-56 h-56 xs:w-72 xs:h-72 sm:w-[500px] sm:h-[500px] transition-transform duration-300 ease-out transform-style-3d pointer-events-none"
         style={{
           transform: `
             translate3d(${transXBottom}px, ${transYBottom}px, ${depthZ - 40}px) 

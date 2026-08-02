@@ -94,7 +94,7 @@ export const CinematicLower3DSection: React.FC<CinematicLower3DSectionProps> = (
         <div className="lg:col-span-5 flex items-center justify-center relative pointer-events-none">
           <div
             ref={graphic3DRef}
-            className="relative w-72 h-80 sm:w-[360px] sm:h-[420px] lg:w-[400px] lg:h-[460px] transition-all duration-300 transform-style-3d"
+            className="relative w-60 h-64 xs:w-72 xs:h-80 sm:w-[360px] sm:h-[420px] lg:w-[400px] lg:h-[460px] transition-all duration-300 transform-style-3d"
             style={{
               transform: 'translate3d(0, 0, 30px) rotateY(-10deg) rotateX(4deg)',
             }}

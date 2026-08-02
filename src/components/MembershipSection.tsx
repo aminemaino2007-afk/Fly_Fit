@@ -43,7 +43,7 @@ export const MembershipSection: React.FC<MembershipSectionProps> = ({ tiers, onS
               viewport={{ once: true }}
               whileHover={{ y: -8 }}
               transition={{ duration: 0.4 }}
-              className={`relative rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 ${
+              className={`relative rounded-3xl p-4 sm:p-8 flex flex-col justify-between transition-all duration-300 ${
                 isFeatured
                   ? 'bg-glass-card border-2 border-white/40 shadow-2xl md:scale-105 z-20'
                   : 'bg-glass-card border border-white/10 hover:border-white/20 z-10'
@@ -51,15 +51,15 @@ export const MembershipSection: React.FC<MembershipSectionProps> = ({ tiers, onS
             >
               {/* Featured Badge Top */}
               {tier.badge && (
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-white text-black font-syne font-extrabold text-[10px] tracking-widest uppercase shadow-lg flex items-center gap-1.5">
-                  <Sparkles className="w-3 h-3 text-black" />
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3.5 py-1 rounded-full bg-white text-black font-syne font-extrabold text-[10px] tracking-widest uppercase shadow-lg flex items-center gap-1.5 whitespace-nowrap">
+                  <Sparkles className="w-3 h-3 text-black shrink-0" />
                   {tier.badge}
                 </div>
               )}
 
-              <div className="space-y-6">
+              <div className="space-y-5">
                 <div>
-                  <h3 className="text-2xl font-syne font-bold text-white tracking-wide">
+                  <h3 className="text-xl sm:text-2xl font-syne font-bold text-white tracking-wide">
                     {tier.name}
                   </h3>
                   <p className="text-xs text-slate-400 font-medium mt-1">
@@ -67,11 +67,11 @@ export const MembershipSection: React.FC<MembershipSectionProps> = ({ tiers, onS
                   </p>
                 </div>
 
-                <div className="py-2 border-y border-white/10 flex items-baseline gap-1">
-                  <span className="text-4xl sm:text-5xl font-syne font-black text-white">
+                <div className="py-2 border-y border-white/10 flex items-baseline gap-1.5 flex-wrap">
+                  <span className="text-3xl sm:text-5xl font-syne font-black text-white">
                     {tier.price}
                   </span>
-                  <span className="text-slate-400 text-xs font-medium uppercase">
+                  <span className="text-slate-400 text-[11px] sm:text-xs font-medium uppercase">
                     / {tier.period}
                   </span>
                 </div>
